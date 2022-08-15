@@ -13,6 +13,11 @@ app.use(bodyParser.urlencoded(({ extended: true })));
 
 require(`${__dirname}/app/routes`)(app);
 
+app.get('/', (req, res) => {
+    res.send("server is running")
+})
+
+
 app.listen(port, () => {
     console.log(`server app listening at ${port}`)
 });
